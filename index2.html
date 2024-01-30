@@ -29,18 +29,18 @@
     <a-scene embedded arjs="trackingMethod: best;">
       <a-marker preset="hiro">
         <!-- Head -->
-        <a-sphere position="0 1.5 0" radius="0.25" color="blue"></a-sphere>
+        <a-sphere position="0 0.5 0" radius="0.25" color="blue"></a-sphere>
         
         <!-- Body (represented as a thin cylinder to act as the spine) -->
-        <a-cylinder position="0 0.75 0" height="1" radius="0.05" color="blue"></a-cylinder>
+        <a-cylinder position="0 0 0" height="1.5" radius="0.1" color="blue"></a-cylinder>
         
-        <!-- Arms (positioned to the sides of the body) -->
-        <a-cylinder position="-0.75 0.75 0" height="0.05" radius="0.5" color="blue" rotation="0 0 90"></a-cylinder>
-        <a-cylinder position="0.75 0.75 0" height="0.05" radius="0.5" color="blue" rotation="0 0 90"></a-cylinder>
+        <!-- Arms (represented as thin cylinders, positioned to the sides of the body) -->
+        <a-cylinder position="-0.5 0.5 0" height="0.1" radius="0.5" color="blue" rotation="0 0 90"></a-cylinder>
+        <a-cylinder position="0.5 0.5 0" height="0.1" radius="0.5" color="blue" rotation="0 0 90"></a-cylinder>
         
-        <!-- Legs (positioned below the body) -->
-        <a-cylinder position="-0.25 0 0" height="1" radius="0.05" color="blue" rotation="0 0 0"></a-cylinder>
-        <a-cylinder position="0.25 0 0" height="1" radius="0.05" color="blue" rotation="0 0 0"></a-cylinder>
+        <!-- Legs (represented as thin cylinders, positioned below the body) -->
+        <a-cylinder position="-0.25 -1 0" height="1.5" radius="0.1" color="blue"></a-cylinder>
+        <a-cylinder position="0.25 -1 0" height="1.5" radius="0.1" color="blue"></a-cylinder>
       </a-marker>
 
       <a-entity camera></a-entity>
