@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Location-based AR</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"
+    ></script>
+    <style>
+      .blue-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .blue-button:hover {
+        background-color: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene
+      vr-mode-ui="enabled: false"
+      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false"
+      renderer="antialias: true; alpha: true"
+    >
+      <a-camera gps-new-camera="gpsMinDistance: 5"></a-camera>
+      <a-entity
+        material="color: red"
+        geometry="primitive: box"
+        gps-new-entity-place="latitude: 41.788628; longitude: 20.897956"
+        scale="1 1 1"
+      ></a-entity>
+      <a-entity
+        material="color: red"
+        geometry="primitive: sphere"
+        gps-new-entity-place="latitude: 41.788575; longitude: 20.897995"
+        scale="1 1 1"
+      ></a-entity>
+      <a-entity
+        material="color: red"
+        geometry="primitive: cone"
+        gps-new-entity-place="latitude: 41.788594; longitude: 20.898024"
+        scale="1 5 1"
+      ></a-entity>
+    </a-scene>
+    <a href="index2.html" class="blue-button">Switch to Marker-Based</a>
+  </body>
+</html>
